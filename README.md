@@ -49,3 +49,20 @@ LIMIT
 ```
 ![q3](https://github.com/varshanbhag06/SQL/assets/153843798/3f7b0712-71e7-42fc-82f5-3526b06dd9dd)
 
+
+QUESTION 4: How many trips start at each station?
+```sql
+SELECT
+  stations.name,
+  COUNT(*) AS trip_count
+FROM
+  `bigquery-public-data.austin_bikeshare.bikeshare_stations` AS stations
+JOIN
+  `bigquery-public-data.austin_bikeshare.bikeshare_trips` AS trips
+ON
+  stations.station_id = trips.start_station_id
+GROUP BY
+  stations.name;
+```
+![q5](https://github.com/varshanbhag06/SQL/assets/153843798/8d5153cc-fd20-476e-bc97-a152f8765317)
+
