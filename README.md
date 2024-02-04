@@ -11,6 +11,7 @@ JOIN
 ON
   s.station_id = t.start_station_id
 GROUP BY
-  s.name;```
+  s.name;
+```
 
 ![Capture](https://github.com/varshanbhag06/SQL/assets/153843798/3069b618-80db-4e93-97cf-dcf0fdd98861)
