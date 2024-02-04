@@ -66,3 +66,25 @@ GROUP BY
 ```
 ![q5](https://github.com/varshanbhag06/SQL/assets/153843798/8d5153cc-fd20-476e-bc97-a152f8765317)
 
+
+QUESTION 5: What are the stations with more docks than the average number of docks across all stations?
+```sql
+WITH
+  AvgDocks AS (
+  SELECT
+    AVG(number_of_docks) AS avg_docks
+  FROM
+    `bigquery-public-data.austin_bikeshare.bikeshare_stations` )
+SELECT
+  s.name, s.station_id, s.city_asset_number, s.number_of_docks
+FROM
+  `bigquery-public-data.austin_bikeshare.bikeshare_stations` s
+JOIN
+  AvgDocks a
+ON
+  s.number_of_docks > a.avg_docks;
+```
+![q4](https://github.com/varshanbhag06/SQL/assets/153843798/a1eba6ca-b763-4fcb-8768-d18079374d0b)
+
+
+
