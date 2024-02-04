@@ -29,3 +29,23 @@ GROUP BY
 ![q2](https://github.com/varshanbhag06/SQL/assets/153843798/36d9f31f-dbe9-42e6-b576-3a2f70e7e04f)
 
 
+QUESTION 3: What are the top 3 stations with the highest total trip duration?
+```sql
+SELECT
+  s.name,
+  SUM(t.duration_minutes) AS total_duration
+FROM
+  `bigquery-public-data.austin_bikeshare.bikeshare_trips` t
+JOIN
+  `bigquery-public-data.austin_bikeshare.bikeshare_stations` s
+ON
+  t.start_station_id = s.station_id
+GROUP BY
+  s.name
+ORDER BY
+  total_duration DESC
+LIMIT
+  3;
+```
+![q3](https://github.com/varshanbhag06/SQL/assets/153843798/3f7b0712-71e7-42fc-82f5-3526b06dd9dd)
+
