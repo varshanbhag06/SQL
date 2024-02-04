@@ -116,8 +116,9 @@ ORDER BY
   number_of_docks DESC
 LIMIT
   5;
-  '''
-![q7](https://github.com/varshanbhag06/SQL/assets/153843798/b220e5ae-3ffd-411f-9c5d-c5b396064438)
+```
+![q7](https://github.com/varshanbhag06/SQL/assets/153843798/143d7929-5358-488b-bbf5-fd01062fd8bc)
+
 
 
 QUESTION 8: Which is the station with the highest number of trips as a start station?
