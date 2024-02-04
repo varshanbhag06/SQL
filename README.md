@@ -13,4 +13,4 @@ ON
 GROUP BY
   s.name;```
 
-![q1](https://github.com/varshanbhag06/SQL/assets/153843798/1713cc71-7f2a-4e6d-8347-bea2dba9c91b)
+![Capture](https://github.com/varshanbhag06/SQL/assets/153843798/3069b618-80db-4e93-97cf-dcf0fdd98861)
